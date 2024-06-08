@@ -46,7 +46,7 @@ async function registerForPushNotificationsAsync() {
         projectId: Constants?.expoConfig?.extra?.eas?.projectId || 'notification-app',
       })
     ).data;
-    console.log(token);
+    console.log('token', token);
   } else {
     alert('Must use physical device for Push Notifications');
   }
@@ -56,7 +56,6 @@ async function registerForPushNotificationsAsync() {
       name: 'default',
       importance: Notifications.AndroidImportance.MAX,
       vibrationPattern: [0, 250, 250, 250],
-      lightColor: '#FF231F7C',
     });
   }
 
